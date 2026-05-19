@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coffee Avenue — Premium café on Satmasjid Road, Dhanmondi. Meet your rocking barista. Open daily until 1 AM. Specialty coffee, desserts & savory bites." />
+  <meta name="keywords" content="coffee avenue, dhanmondi cafe, satmasjid road cafe, specialty coffee dhaka, cafe near me, coffee shop dhaka" />
+  <meta property="og:title" content="Coffee Avenue — Dhanmondi's Favourite Brew Spot" />
+  <meta property="og:description" content="Meet with a Rocking Barista. Open daily until 1 AM on Satmasjid Road, Dhanmondi." />
+  <meta property="og:type" content="website" />
+  <title>Coffee Avenue | কফি এভিনিউ — Dhanmondi, Dhaka</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ══════════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════════ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__cup">
+      <div class="preloader__steam">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="preloader__mug">☕</div>
+    </div>
+    <p class="preloader__text">Brewing something special…</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HEADER / STICKY NAVIGATION
+  ══════════════════════════════════════════ -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="Coffee Avenue Home">
+        <span class="navbar__logo-icon">☕</span>
+        <span class="navbar__logo-text">
+          <span class="navbar__logo-primary">Coffee</span>
+          <span class="navbar__logo-secondary">Avenue</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a href="#menu" class="navbar__link">Menu</a>
+        <a href="#vibe" class="navbar__link">Our Vibe</a>
+        <a href="#reviews" class="navbar__link">Reviews</a>
+        <a href="#location" class="navbar__link">Find Us</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="navbar__actions">
+        <a href="tel:01327419695" class="btn btn--amber btn--sm navbar__cta">
+          <i class="fa-solid fa-mug-hot"></i> Order Now
+        </a>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true">
+      <nav class="mobile-drawer__links" aria-label="Mobile navigation">
+        <a href="#menu" class="mobile-drawer__link">Menu</a>
+        <a href="#vibe" class="mobile-drawer__link">Our Vibe</a>
+        <a href="#reviews" class="mobile-drawer__link">Reviews</a>
+        <a href="#location" class="mobile-drawer__link">Find Us</a>
+        <a href="tel:01327419695" class="btn btn--amber mobile-drawer__cta">
+          <i class="fa-solid fa-phone"></i> Call to Order
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Hero">
+      <!-- Parallax BG layers -->
+      <div class="hero__bg hero__bg--deep" aria-hidden="true"></div>
+      <div class="hero__bg hero__bg--overlay" aria-hidden="true"></div>
+      <div class="hero__particles" id="heroParticles" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <!-- Badge -->
+        <div class="hero__badge animate-fade-up">
+          <span class="hero__badge-dot"></span>
+          Open Daily · Closes 1:00 AM
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero__headline animate-fade-up animate-delay-1">
+          Where Every Sip<br />
+          <em class="hero__headline-accent">Tells a Story.</em>
+        </h1>
+
+        <!-- Sub -->
+        <p class="hero__subheadline animate-fade-up animate-delay-2">
+          Dhanmondi's cosiest corner for specialty brews, decadent desserts,<br class="br-desktop" />
+          and the best barista this side of Satmasjid Road.
+        </p>
+
+        <!-- Dual CTAs -->
+        <div class="hero__ctas animate-fade-up animate-delay-3">
+          <a href="#menu" class="btn btn--amber btn--lg">
+            <i class="fa-solid fa-book-open"></i> View Menu
+          </a>
+          <a href="#location" class="btn btn--outline btn--lg">
+            <i class="fa-solid fa-location-dot"></i> Find Us on Satmasjid Rd
+          </a>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="hero__stats animate-fade-up animate-delay-4">
+          <div class="hero__stat">
+            <span class="hero__stat-value">4.3★</span>
+            <span class="hero__stat-label">Google Rating</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">517+</span>
+            <span class="hero__stat-label">Happy Guests</span>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">৳200–600</span>
+            <span class="hero__stat-label">Per Person</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero__scroll-hint animate-bounce" aria-hidden="true">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SERVICE HIGHLIGHTS
+    ══════════════════════════════════════════ -->
+    <section id="services" class="services section" aria-label="Our Services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How We Serve You</span>
+          <h2 class="section-title">Coffee, <em>Your Way.</em></h2>
+          <p class="section-sub">Three ways to enjoy Coffee Avenue — because great coffee shouldn't have limits.</p>
+        </div>
+
+        <div class="services__grid">
+
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-card__icon-wrap">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-chair"></i>
+              </div>
+            </div>
+            <h3 class="service-card__title">Dine-In</h3>
+            <p class="service-card__desc">
+              Settle into our cosy 2nd-floor haven. Ambient music, warm lighting, and a barista who knows your vibe.
+              Perfect for study sessions, dates, or simply escaping Dhaka's chaos.
+            </p>
+            <span class="service-card__tag">2nd Floor, Old Concord</span>
+          </div>
+
+          <div class="service-card service-card--featured" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card__icon-wrap">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-car-side"></i>
+              </div>
+            </div>
+            <div class="service-card__badge">Popular</div>
+            <h3 class="service-card__title">Drive-Through</h3>
+            <p class="service-card__desc">
+              Grab your fix without leaving the seat. Roll up to Satmasjid Road and let us hand you liquid gold
+              through the window. Quick, easy, delicious.
+            </p>
+            <span class="service-card__tag">Available All Hours</span>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card__icon-wrap">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+            </div>
+            <h3 class="service-card__title">No-Contact Delivery</h3>
+            <p class="service-card__desc">
+              Stay in, stay safe, stay caffeinated. Our no-contact delivery brings Coffee Avenue's finest
+              straight to your door — hot, fresh, and on time.
+            </p>
+            <span class="service-card__tag">Call: 01327-419695</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         INTERACTIVE DIGITAL MENU
+    ══════════════════════════════════════════ -->
+    <section id="menu" class="menu-section section" aria-label="Our Menu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Brew & Bake</span>
+          <h2 class="section-title">The <em>Menu.</em></h2>
+          <p class="section-sub">Crafted with care, priced for Dhaka. Every item is a good decision.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="menu__tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu__tab menu__tab--active" role="tab" aria-selected="true" data-tab="espresso" aria-controls="tab-espresso">
+            <i class="fa-solid fa-mug-hot"></i> Brewed &amp; Espresso
+          </button>
+          <button class="menu__tab" role="tab" aria-selected="false" data-tab="desserts" aria-controls="tab-desserts">
+            <i class="fa-solid fa-cake-candles"></i> Sweets &amp; Desserts
+          </button>
+          <button class="menu__tab" role="tab" aria-selected="false" data-tab="savory" aria-controls="tab-savory">
+            <i class="fa-solid fa-sandwich"></i> Savory Bites
+          </button>
+        </div>
+
+        <!-- Menu Panels -->
+        <div class="menu__panels">
+
+          <!-- Panel: Brewed & Espresso -->
+          <div class="menu__panel menu__panel--active" id="tab-espresso" role="tabpanel" aria-label="Brewed and Espresso">
+            <div class="menu__grid">
+
+              <div class="menu-item" data-item="cappuccino">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--cappuccino" aria-label="Cappuccino"></div>
+                  <div class="menu-item__overlay">
+                    <span>Bold. Creamy. Classic.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Cappuccino</h4>
+                    <span class="menu-item__price">৳220</span>
+                  </div>
+                  <p class="menu-item__desc">Velvety espresso topped with thick, silky foam. The classic that never misses.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--hot">Hot</span>
+                    <span class="tag tag--popular">Bestseller</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="latte">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--latte" aria-label="Latte"></div>
+                  <div class="menu-item__overlay">
+                    <span>Smooth. Milky. Perfect.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Latte</h4>
+                    <span class="menu-item__price">৳230</span>
+                  </div>
+                  <p class="menu-item__desc">Espresso kissed by steamed milk. The barista's canvas, your daily ritual.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--hot">Hot</span>
+                    <span class="tag tag--art">Latte Art</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="irish">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--irish" aria-label="Irish Coffee"></div>
+                  <div class="menu-item__overlay">
+                    <span>Bold. Spirited. Legendary.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Irish Coffee</h4>
+                    <span class="menu-item__price">৳320</span>
+                  </div>
+                  <p class="menu-item__desc">Rich coffee with an adventurous twist. For evenings that deserve a bit of drama.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--special">Signature</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="espresso">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--espresso" aria-label="Espresso"></div>
+                  <div class="menu-item__overlay">
+                    <span>Pure. Intense. Unapologetic.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Espresso</h4>
+                    <span class="menu-item__price">৳200</span>
+                  </div>
+                  <p class="menu-item__desc">Short, dark, and impossibly strong. For those who take their coffee seriously.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--hot">Hot</span>
+                    <span class="tag tag--intense">Intense</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="butterscotch">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--butterscotch" aria-label="Butterscotch Mocha"></div>
+                  <div class="menu-item__overlay">
+                    <span>Sweet. Indulgent. Addictive.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Butterscotch Mocha</h4>
+                    <span class="menu-item__price">৳290</span>
+                  </div>
+                  <p class="menu-item__desc">Espresso meets butterscotch heaven. Warning: you will order this twice.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--special">Signature</span>
+                    <span class="tag tag--popular">Fan Fav</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="hazelnut">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--hazelnut" aria-label="Hazelnut Caramel Latte"></div>
+                  <div class="menu-item__overlay">
+                    <span>Nutty. Caramel. Dreamy.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Hazelnut &amp; Caramel Latte</h4>
+                    <span class="menu-item__price">৳300</span>
+                  </div>
+                  <p class="menu-item__desc">Hazelnut syrup, caramel drizzle, smooth espresso. The trinity of good decisions.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--special">Signature</span>
+                    <span class="tag tag--sweet">Sweet</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="blueberry">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--blueberry" aria-label="Blueberry Refresher"></div>
+                  <div class="menu-item__overlay">
+                    <span>Fresh. Fruity. Energizing.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Blueberry Refresher</h4>
+                    <span class="menu-item__price">৳250</span>
+                  </div>
+                  <p class="menu-item__desc">Because sometimes you need a break from caffeine but not from flavour. Icy, vibrant, refreshing.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--cold">Cold</span>
+                    <span class="tag tag--fresh">Fresh</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="hotchoc">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--hotchoc" aria-label="Hot Chocolate"></div>
+                  <div class="menu-item__overlay">
+                    <span>Warm. Rich. Comforting.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Hot Chocolate</h4>
+                    <span class="menu-item__price">৳240</span>
+                  </div>
+                  <p class="menu-item__desc">Thick, velvety chocolate goodness. The drink that hugs you from the inside.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--hot">Hot</span>
+                    <span class="tag tag--cozy">Cozy</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Panel: Sweets & Desserts -->
+          <div class="menu__panel" id="tab-desserts" role="tabpanel" aria-label="Sweets and Desserts">
+            <div class="menu__grid">
+
+              <div class="menu-item" data-item="brownie">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--brownie" aria-label="Brownie with Ice Cream"></div>
+                  <div class="menu-item__overlay">
+                    <span>Warm. Fudgy. Legendary.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Brownie with Ice Cream</h4>
+                    <span class="menu-item__price">৳350</span>
+                  </div>
+                  <p class="menu-item__desc">Warm fudge brownie + cold vanilla ice cream = the most chaotic good pairing since coffee and mornings.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--popular">Bestseller</span>
+                    <span class="tag tag--special">Must Try</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="blondie">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--blondie" aria-label="Caramel Blondie"></div>
+                  <div class="menu-item__overlay">
+                    <span>Buttery. Caramel. Sublime.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Caramel Blondie</h4>
+                    <span class="menu-item__price">৳320</span>
+                  </div>
+                  <p class="menu-item__desc">Chewy, buttery blondie with gooey caramel. Pairs dangerously well with any of our lattes.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--special">Signature</span>
+                    <span class="tag tag--sweet">Sweet</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="choccake">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--choccake" aria-label="Chocolate Cake"></div>
+                  <div class="menu-item__overlay">
+                    <span>Decadent. Moist. Irresistible.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Chocolate Cake</h4>
+                    <span class="menu-item__price">৳380</span>
+                  </div>
+                  <p class="menu-item__desc">Layers of rich chocolate sponge and ganache. Because life is too short for bad cake.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--popular">Crowd Fav</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Panel: Savory Bites -->
+          <div class="menu__panel" id="tab-savory" role="tabpanel" aria-label="Savory Bites">
+            <div class="menu__grid">
+
+              <div class="menu-item" data-item="smokedchicken">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--smokedchicken" aria-label="Smoked Chicken Sandwich"></div>
+                  <div class="menu-item__overlay">
+                    <span>Smoky. Hearty. Satisfying.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Smoked Chicken Sandwich</h4>
+                    <span class="menu-item__price">৳390</span>
+                  </div>
+                  <p class="menu-item__desc">Tender smoked chicken, fresh greens, and creamy sauce stacked between artisan bread. A proper meal.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--popular">Bestseller</span>
+                    <span class="tag tag--hearty">Hearty</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-item" data-item="grilledchicken">
+                <div class="menu-item__img-wrap">
+                  <div class="menu-item__img menu-item__img--grilledchicken" aria-label="Chicken Grilled Sandwich"></div>
+                  <div class="menu-item__overlay">
+                    <span>Crispy. Grilled. Glorious.</span>
+                  </div>
+                </div>
+                <div class="menu-item__body">
+                  <div class="menu-item__header">
+                    <h4 class="menu-item__name">Chicken Grilled Sandwich</h4>
+                    <span class="menu-item__price">৳370</span>
+                  </div>
+                  <p class="menu-item__desc">Golden grilled perfection with juicy chicken, melted cheese, and house seasoning. Yes, it's as good as it sounds.</p>
+                  <div class="menu-item__tags">
+                    <span class="tag tag--popular">Fan Fav</span>
+                    <span class="tag tag--hearty">Filling</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Menu CTA -->
+        <div class="menu__footer">
+          <p class="menu__footer-text">Prices for dine-in. Delivery charges may apply.</p>
+          <a href="tel:01327419695" class="btn btn--amber">
+            <i class="fa-solid fa-phone"></i> Call to Order — 01327-419695
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         VIBE & BARISTA SPOTLIGHT
+    ══════════════════════════════════════════ -->
+    <section id="vibe" class="vibe section" aria-label="Our Vibe and Barista Spotlight">
+      <div class="vibe__bg-layer" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="vibe__inner">
+
+          <!-- Left: Text content -->
+          <div class="vibe__text" data-aos="fade-right">
+            <span class="section-tag">The Coffee Avenue Experience</span>
+            <h2 class="section-title vibe__title">
+              Meet Your<br /><em class="hero__headline-accent">Rocking Barista.</em>
+            </h2>
+            <p class="vibe__desc">
+              This isn't just a café — it's a vibe. Perched on the 2nd floor of the Old Concord building on
+              Satmasjid Road, Coffee Avenue is where Dhanmondi comes to breathe. Students pull all-nighters here.
+              Couples find their corner. Professionals close deals over a Butterscotch Mocha.
+            </p>
+            <p class="vibe__desc">
+              At the heart of it all? <strong>Our barista.</strong> Part artist, part therapist, full-time coffee wizard.
+              They'll remember your order, debate your taste in music, and pour a latte art that's actually
+              too pretty to drink (but you will anyway).
+            </p>
+
+            <div class="vibe__features">
+              <div class="vibe__feature">
+                <div class="vibe__feature-icon"><i class="fa-solid fa-moon"></i></div>
+                <div>
+                  <strong>Night Owl Approved</strong>
+                  <p>We're open until 1:00 AM. Your 11 PM coffee craving is valid.</p>
+                </div>
+              </div>
+              <div class="vibe__feature">
+                <div class="vibe__feature-icon"><i class="fa-solid fa-wifi"></i></div>
+                <div>
+                  <strong>Study-Friendly Space</strong>
+                  <p>Fast Wi-Fi, comfy seats, ambient vibes. The ideal third place.</p>
+                </div>
+              </div>
+              <div class="vibe__feature">
+                <div class="vibe__feature-icon"><i class="fa-solid fa-star"></i></div>
+                <div>
+                  <strong>4.3★ on Google</strong>
+                  <p>517+ reviews. Real people. Real coffee. Real good.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#location" class="btn btn--amber vibe__cta">
+              <i class="fa-solid fa-map-location-dot"></i> Get Directions
+            </a>
+          </div>
+
+          <!-- Right: Visual showcase -->
+          <div class="vibe__visual" data-aos="fade-left">
+            <div class="vibe__card-stack">
+
+              <div class="vibe__card vibe__card--main">
+                <div class="vibe__card-inner vibe__img--atmosphere" aria-label="Coffee Avenue cozy atmosphere">
+                  <div class="vibe__card-caption">
+                    <span>2nd Floor · Satmasjid Road</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="vibe__card vibe__card--secondary">
+                <div class="vibe__card-inner vibe__img--latte-art" aria-label="Barista crafting latte art">
+                  <div class="vibe__card-caption">
+                    <span>Crafted with ❤</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating badge -->
+              <div class="vibe__float-badge">
+                <div class="vibe__float-badge-emoji">☕</div>
+                <div>
+                  <strong>Daily Until 1 AM</strong>
+                  <span>Come late. Stay later.</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SOCIAL PROOF — REVIEWS
+    ══════════════════════════════════════════ -->
+    <section id="reviews" class="reviews section" aria-label="Customer Reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What Dhaka Is Saying</span>
+          <h2 class="section-title">Real Sips, <em>Real Reviews.</em></h2>
+          <div class="reviews__rating-badge">
+            <div class="reviews__stars" aria-label="4.3 out of 5 stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <span class="reviews__rating-number">4.3</span>
+            <span class="reviews__rating-count">517+ Google Reviews</span>
+          </div>
+        </div>
+
+        <div class="reviews__grid">
+
+          <div class="review-card" data-aos="fade-up">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--1">R</div>
+              <div>
+                <strong class="review-card__name">Rafi H.</strong>
+                <div class="review-card__stars" aria-label="5 stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <span class="review-card__source"><i class="fab fa-google"></i></span>
+            </div>
+            <p class="review-card__text">
+              "Hands down the best cappuccino in Dhanmondi. The barista actually knows what they're doing —
+              perfect crema every single time. The 2nd floor view is a bonus."
+            </p>
+            <span class="review-card__date">Via Google</span>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--2">N</div>
+              <div>
+                <strong class="review-card__name">Nusrat T.</strong>
+                <div class="review-card__stars" aria-label="5 stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <span class="review-card__source"><i class="fab fa-google"></i></span>
+            </div>
+            <p class="review-card__text">
+              "Ordered the Butterscotch Mocha and the Brownie with Ice Cream together. My life is divided into
+              before and after this moment. Coffee Avenue is NOT a joke."
+            </p>
+            <span class="review-card__date">Via Google</span>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--3">S</div>
+              <div>
+                <strong class="review-card__name">Sabbir M.</strong>
+                <div class="review-card__stars" aria-label="4 stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <span class="review-card__source"><i class="fab fa-google"></i></span>
+            </div>
+            <p class="review-card__text">
+              "Perfect late-night spot. I've been coming here for thesis writing sessions for months. Open until 1 AM,
+              fast Wi-Fi, and the Hazelnut Caramel Latte keeps me going. 10/10 would recommend."
+            </p>
+            <span class="review-card__date">Via Google</span>
+          </div>
+
+          <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--4">F</div>
+              <div>
+                <strong class="review-card__name">Fariha I.</strong>
+                <div class="review-card__stars" aria-label="5 stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <span class="review-card__source"><i class="fab fa-google"></i></span>
+            </div>
+            <p class="review-card__text">
+              "The Smoked Chicken Sandwich + Irish Coffee combo hit differently. The ambiance is exactly what
+              Dhanmondi needed. Rocking barista indeed — shoutout to the team!"
+            </p>
+            <span class="review-card__date">Via Google</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         LOCATION & FIND US
+    ══════════════════════════════════════════ -->
+    <section id="location" class="location section" aria-label="Location and Contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Come Find Us</span>
+          <h2 class="section-title">We're on <em>Satmasjid Road.</em></h2>
+          <p class="section-sub">2nd floor with a view. Easy to find, impossible to forget.</p>
+        </div>
+
+        <div class="location__inner">
+
+          <!-- Map embed -->
+          <div class="location__map-wrap" data-aos="fade-right">
+            <div class="location__map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.3427654321!2d90.37212!3d23.74872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bf4e1e5b3c2d%3A0x7f2e39f87a43c1b!2sCoffee%20Avenue!5e0!3m2!1sen!2sbd!4v1716028800000!5m2!1sen!2sbd"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Coffee Avenue location on Google Maps"
+                aria-label="Google Maps showing Coffee Avenue location on Satmasjid Road, Dhanmondi">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Info card -->
+          <div class="location__info" data-aos="fade-left">
+
+            <div class="location__status" id="openStatus">
+              <span class="location__status-dot"></span>
+              <span class="location__status-text">Checking hours…</span>
+            </div>
+
+            <div class="location__detail">
+              <div class="location__detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Address</strong>
+                <p>2nd Floor, Old Concord Mumtaz Karim Heritage<br />776 Satmasjid Road, Dhanmondi<br />Dhaka 1209</p>
+                <a href="https://maps.app.goo.gl/Q929G3Dhaka" target="_blank" rel="noopener noreferrer" class="location__map-link">
+                  Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="location__detail">
+              <div class="location__detail-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>Hours</strong>
+                <p>Open Daily</p>
+                <p class="location__hours-note">Closes at <strong>1:00 AM</strong></p>
+              </div>
+            </div>
+
+            <div class="location__detail">
+              <div class="location__detail-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:01327419695" class="location__phone">01327-419695</a>
+              </div>
+            </div>
+
+            <div class="location__detail">
+              <div class="location__detail-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <div>
+                <strong>Services</strong>
+                <p>Dine-In · Drive-Through · No-Contact Delivery</p>
+              </div>
+            </div>
+
+            <a href="tel:01327419695" class="btn btn--amber location__cta">
+              <i class="fa-solid fa-mug-hot"></i> Order Now — Call Us
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="#hero" class="navbar__logo footer__logo">
+          <span class="navbar__logo-icon">☕</span>
+          <span class="navbar__logo-text">
+            <span class="navbar__logo-primary">Coffee</span>
+            <span class="navbar__logo-secondary">Avenue</span>
+          </span>
+        </a>
+        <p class="footer__tagline">Meet with a Rocking Barista.</p>
+        <p class="footer__bengali">কফি এভিনিউ — ধানমন্ডি, ঢাকা</p>
+      </div>
+
+      <div class="footer__links">
+        <h4 class="footer__heading">Navigate</h4>
+        <a href="#menu" class="footer__link">Our Menu</a>
+        <a href="#vibe" class="footer__link">Our Vibe</a>
+        <a href="#reviews" class="footer__link">Reviews</a>
+        <a href="#location" class="footer__link">Location</a>
+      </div>
+
+      <div class="footer__contact">
+        <h4 class="footer__heading">Get in Touch</h4>
+        <a href="tel:01327419695" class="footer__link footer__link--phone">
+          <i class="fa-solid fa-phone"></i> 01327-419695
+        </a>
+        <p class="footer__link">
+          <i class="fa-solid fa-location-dot"></i> 776 Satmasjid Rd, Dhanmondi
+        </p>
+        <p class="footer__link">
+          <i class="fa-solid fa-clock"></i> Daily · Until 1:00 AM
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2025 Coffee Avenue. All rights reserved. Crafted with ☕ in Dhaka.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
