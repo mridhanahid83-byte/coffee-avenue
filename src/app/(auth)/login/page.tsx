@@ -2,6 +2,10 @@ import { redirect } from "next/navigation";
 import { isSetupComplete } from "@/lib/actions/setup";
 import { LoginForm } from "./login-form";
 
+// This page gates whether the app can be entered at all, based on live
+// database state. It must never be statically frozen at build time.
+export const dynamic = "force-dynamic";
+
 export default async function LoginPage() {
   if (!(await isSetupComplete())) {
     redirect("/setup");
