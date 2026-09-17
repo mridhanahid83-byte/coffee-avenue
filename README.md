@@ -16,7 +16,12 @@ no source code changes required for day-to-day use.
 - Server Actions + API routes for all mutations, with permission checks enforced server-side
 - **Zod** for input validation, **bcryptjs** for password hashing
 
-## Getting started
+## Deploying to production
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for step-by-step instructions to deploy to Vercel
+with a free Neon Postgres database.
+
+## Getting started (local development)
 
 1. Install dependencies:
 
