@@ -93,25 +93,26 @@ model Employee {
   updatedAt DateTime @updatedAt
 
   // relations
-  attendances           Attendance[]      @relation("AttendanceEmployee")
-  attendanceCorrections Attendance[]      @relation("AttendanceCorrectedBy")
-  leaves                Leave[]           @relation("LeaveEmployee")
-  leaveReviews          Leave[]           @relation("LeaveReviewer")
-  clientTeams           ClientTeam[]
-  clientsAsCS           Client[]          @relation("ClientAssignedCS")
-  tasksAssigned         Task[]            @relation("TaskAssignee")
-  tasksCreated          Task[]            @relation("TaskAssignedBy")
-  tasksReviewed         Task[]            @relation("TaskReviewer")
-  taskComments          TaskComment[]
-  taskAttachments       TaskAttachment[]
-  taskActivities        TaskActivity[]
-  contentItems          ContentItem[]
-  campaigns             Campaign[]
-  notifications         Notification[]
-  performanceNotesFor   PerformanceNote[] @relation("PerformanceSubject")
-  performanceNotesBy    PerformanceNote[] @relation("PerformanceAuthor")
-  activityLogs          ActivityLog[]
-  voiceChannelsCreated  VoiceChannel[]
+  attendances             Attendance[]         @relation("AttendanceEmployee")
+  attendanceCorrections   Attendance[]         @relation("AttendanceCorrectedBy")
+  leaves                  Leave[]              @relation("LeaveEmployee")
+  leaveReviews            Leave[]              @relation("LeaveReviewer")
+  clientTeams             ClientTeam[]
+  clientsAsCS             Client[]             @relation("ClientAssignedCS")
+  tasksAssigned           Task[]               @relation("TaskAssignee")
+  tasksCreated            Task[]               @relation("TaskAssignedBy")
+  tasksReviewed           Task[]               @relation("TaskReviewer")
+  taskComments            TaskComment[]
+  taskAttachments         TaskAttachment[]
+  taskActivities          TaskActivity[]
+  contentItems            ContentItem[]
+  campaigns               Campaign[]
+  notifications           Notification[]
+  performanceNotesFor     PerformanceNote[]    @relation("PerformanceSubject")
+  performanceNotesBy      PerformanceNote[]    @relation("PerformanceAuthor")
+  activityLogs            ActivityLog[]
+  voiceChannelsCreated    VoiceChannel[]
+  voiceChannelMemberships VoiceChannelMember[]
 
   @@index([status])
   @@index([departmentId])
@@ -570,10 +571,27 @@ model VoiceChannel {
   id          String   @id @default(cuid())
   name        String   @unique
   description String?
+  isPrivate   Boolean  @default(false)
   createdAt   DateTime @default(now())
 
   createdById String?
   createdBy   Employee? @relation(fields: [createdById], references: [id])
 
+  members VoiceChannelMember[]
+
   @@map("voice_channels")
+}
+
+model VoiceChannelMember {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  channelId String
+  channel   VoiceChannel @relation(fields: [channelId], references: [id], onDelete: Cascade)
+
+  employeeId String
+  employee   Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+
+  @@unique([channelId, employeeId])
+  @@map("voice_channel_members")
 }

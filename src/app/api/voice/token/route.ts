@@ -3,6 +3,7 @@ import { auth } from "@/lib/auth";
 import { hasPermission } from "@/lib/permissions";
 import { prisma } from "@/lib/prisma";
 import { createVoiceChannelToken, isLiveKitConfigured } from "@/lib/livekit";
+import { canAccessVoiceChannel } from "@/lib/voice-access";
 
 export async function POST(req: NextRequest) {
   const session = await auth();
@@ -25,6 +26,11 @@ export async function POST(req: NextRequest) {
 
   const channel = await prisma.voiceChannel.findUnique({ where: { id: channelId } });
   if (!channel) return NextResponse.json({ error: "Voice channel not found." }, { status: 404 });
+
+  const allowed = await canAccessVoiceChannel(channelId, session.user.id, session.user.permissions);
+  if (!allowed) {
+    return NextResponse.json({ error: "This voice channel is private. Ask the channel owner to invite you." }, { status: 403 });
+  }
 
   const token = await createVoiceChannelToken({
     roomName: channel.id,

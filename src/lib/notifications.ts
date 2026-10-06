@@ -11,6 +11,7 @@ export type NotificationType =
   | "COMMENT_ADDED"
   | "MENTION"
   | "LEAVE_STATUS"
+  | "VOICE_INVITE"
   | "GENERAL";
 
 export async function notify(input: {
