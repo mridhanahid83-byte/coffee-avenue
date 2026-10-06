@@ -1,4 +1,4 @@
-import { auth } from "@/lib/auth";
+import { auth } from "@/lib/auth.config";
 import { NextResponse } from "next/server";
 
 const PUBLIC_PATHS = ["/login", "/setup"];
@@ -35,6 +35,5 @@ export default auth((req) => {
 });
 
 export const config = {
-  runtime: "nodejs",
   matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|ico)$).*)"],
 };
