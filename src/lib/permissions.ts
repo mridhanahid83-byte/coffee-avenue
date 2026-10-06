@@ -89,6 +89,14 @@ export const PERMISSION_GROUPS: { group: string; items: { key: string; label: st
     ],
   },
   {
+    group: "Voice",
+    items: [
+      { key: "voice.view", label: "View voice channels" },
+      { key: "voice.join", label: "Join voice channels (audio, video, screen share)" },
+      { key: "voice.manage", label: "Create / delete voice channels" },
+    ],
+  },
+  {
     group: "System",
     items: [
       { key: "notifications.own", label: "Receive notifications" },
@@ -152,6 +160,9 @@ export const DEFAULT_ROLE_PERMISSIONS: Record<string, string[]> = {
     "notifications.own",
     "activity.view",
     "settings.manage",
+    "voice.view",
+    "voice.join",
+    "voice.manage",
   ],
   manager: [
     "dashboard.view.own",
@@ -180,6 +191,9 @@ export const DEFAULT_ROLE_PERMISSIONS: Record<string, string[]> = {
     "reports.view",
     "notifications.own",
     "activity.view",
+    "voice.view",
+    "voice.join",
+    "voice.manage",
   ],
   team_lead: [
     "dashboard.view.own",
@@ -201,6 +215,9 @@ export const DEFAULT_ROLE_PERMISSIONS: Record<string, string[]> = {
     "performance.viewOwn",
     "performance.viewAll",
     "notifications.own",
+    "voice.view",
+    "voice.join",
+    "voice.manage",
   ],
   employee: [
     "dashboard.view.own",
@@ -213,6 +230,8 @@ export const DEFAULT_ROLE_PERMISSIONS: Record<string, string[]> = {
     "campaigns.view",
     "performance.viewOwn",
     "notifications.own",
+    "voice.view",
+    "voice.join",
   ],
   intern: [
     "dashboard.view.own",
@@ -222,5 +241,7 @@ export const DEFAULT_ROLE_PERMISSIONS: Record<string, string[]> = {
     "tasks.updateOwn",
     "performance.viewOwn",
     "notifications.own",
+    "voice.view",
+    "voice.join",
   ],
 };

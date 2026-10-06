@@ -88,12 +88,23 @@ right permissions.
   gate.
 - **Modules** — under `src/app/(app)/`: `dashboard`, `attendance`, `tasks` (+ `tasks/board`
   for department/agency-wide views), `clients` (with a tabbed client profile), `content`,
-  `campaigns`, `team`, `performance`, `reports`, `notifications`, `activity`, `settings`.
+  `campaigns`, `voice` (live audio/video + screen share, see below), `team`, `performance`,
+  `reports`, `notifications`, `activity`, `settings`.
 - **Server actions** — under `src/lib/actions/`, one file per module. Every mutation writes
   to `ActivityLog` (audit trail) and, where relevant, creates `Notification` rows.
 - **Database schema** — `prisma/schema.prisma`. Historical records are preserved: employees
   are deactivated/suspended (never deleted), clients are archived (never deleted), and their
   past tasks, attendance and activity remain intact and attributed to them.
+
+## Voice channels
+
+Anyone with the `voice.join` permission can create or hop into a named voice channel
+(Settings → Roles & Permissions controls who) for live audio, video and screen sharing —
+no scheduling needed. This is backed by [LiveKit](https://livekit.io) (`src/lib/livekit.ts`,
+`src/app/api/voice/token`, `src/components/voice/`); channels can be created even without
+LiveKit configured, but joining requires `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` and
+`LIVEKIT_URL` to be set (see DEPLOYMENT.md) — until then the UI shows a clear "not
+configured" message rather than failing silently.
 
 ## Working schedule
 

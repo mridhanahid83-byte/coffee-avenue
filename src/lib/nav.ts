@@ -7,6 +7,7 @@ export type NavIconName =
   | "clients"
   | "content"
   | "campaigns"
+  | "voice"
   | "team"
   | "performance"
   | "reports"
@@ -28,6 +29,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Clients", href: "/clients", icon: "clients", anyOf: ["clients.view"] },
   { label: "Content", href: "/content", icon: "content", anyOf: ["content.view"] },
   { label: "Campaigns", href: "/campaigns", icon: "campaigns", anyOf: ["campaigns.view"] },
+  { label: "Voice", href: "/voice", icon: "voice", anyOf: ["voice.view"] },
   { label: "Team", href: "/team", icon: "team", anyOf: ["employees.view"] },
   { label: "Performance", href: "/performance", icon: "performance", anyOf: ["performance.viewOwn", "performance.viewAll"] },
   { label: "Reports", href: "/reports", icon: "reports", anyOf: ["reports.view"] },

@@ -51,7 +51,31 @@ Do **not** run `npm run db:seed` against this database unless you specifically w
 bundled demo data (sample employees/clients/tasks) — it's meant for local development,
 not a real deployment.
 
-## 5. (Optional) Custom domain
+## 5. (Optional) Enable Voice Channels (live audio/video + screen share)
+
+Voice Channels work out of the box for creating/browsing channels, but joining a call
+needs a real-time media service:
+
+1. Go to [livekit.io](https://livekit.io/cloud) and sign up (free tier is generous for a
+   small team).
+2. Create a project. On its dashboard, find **API Keys** — copy the **API Key**, **API
+   Secret**, and the project's **WebSocket URL** (looks like
+   `wss://your-project-xxxxxx.livekit.cloud`).
+3. In Vercel → your project → **Settings → Environment Variables**, add:
+
+   | Name | Value |
+   |---|---|
+   | `LIVEKIT_API_KEY` | from the LiveKit dashboard |
+   | `LIVEKIT_API_SECRET` | from the LiveKit dashboard |
+   | `LIVEKIT_URL` | the `wss://...` URL from the LiveKit dashboard |
+
+4. Redeploy (Deployments tab → latest deployment → **⋯** → **Redeploy**) so the new env
+   vars take effect.
+
+Until these are set, the Voice Channels page shows a clear "not configured yet" message
+instead of a broken call — nothing crashes, it just can't connect to a media server yet.
+
+## 6. (Optional) Custom domain
 
 In the Vercel project → **Settings → Domains**, add your own domain (e.g.
 `os.fameterra.com`) and follow the DNS instructions Vercel shows you.
